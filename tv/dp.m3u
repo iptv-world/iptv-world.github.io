@@ -1,0 +1,3 @@
+#EXTM3U
+#EXTINF:-1 tvg-id="ToloTV.af" status="online",Tolo TV (720p)
+https://somoy.appv.jagobd.com:444/somoy/deeptotv.stream/playlist.m3u8
