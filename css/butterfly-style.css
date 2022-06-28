@@ -1,0 +1,38 @@
+.vjs-icon-placeholder{
+    color: #fff !important;
+  }      
+  
+  .vjs-live-display{       
+    color: #fff !important;
+  }
+
+  .video-js .vjs-progress-control {
+      display: none;
+  }
+
+  .video-js .vjs-fullscreen-control {
+      position: absolute;
+      right: 0px;
+  }
+
+  .sidebar-menu-logo{
+     width:106px;
+     height: 59px;
+  }
+
+  .sidebar-menu-double-logo{
+      width: 100px;
+      height: 95px;
+  }
+
+  /* .logo-container{
+      padding: 10px;
+  } */
+
+  .logo-container:hover{
+      background-color: rgb(236, 212, 206);
+  }
+
+  .list-group-item:hover{
+    background-color: transparent !important;
+  }
