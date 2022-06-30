@@ -8,7 +8,7 @@ loginButton.addEventListener("click", (e) => {
     const password = loginForm.password.value;
 
     if (username === "tushar" && password === "sysadmin") {
-        window.location.href="https://website-iptv-world-live.on.drv.tw/web/tem/";
+        window.location.href="https://iptv-world.github.io/tem/";
     } else {
         loginErrorMsg.style.opacity = 1;
     }
