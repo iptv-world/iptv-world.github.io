@@ -18,6 +18,14 @@
     setTimeout('Redirect()', 7200000);   
 </script>
 
+<style>
+    #clock {
+        font-size: 15px;
+        width: 15px;
+		color: red;
+        }
+</style>
+
 <script type="text/javascript">
 
     window.setInterval(function(){
@@ -114,13 +122,13 @@
 					</tr>
 					<tr>
 						<td colspan="2"><center><div id="clock"></div><center></td>
-						<td colspan="2"><center><a href="https://iptvworld.bitbucket.io/net_tv/" target="_blank">NET Tv</a></center></td>
+						<td colspan="2"><center><a href="https://iptvworld.bitbucket.io/net_tv/" target="_blank">NET Tv (Adult 18+)</a></center></td>
 					</tr>						
 					<tr>
 						<td><center><a href="http://103.55.144.46/" target="_blank">Internet Tv</a></center></td>
 						<td><center><a href="http://livetv.com.bd/" target="_blank">Live-Tv BD</a></center></td>
 						<td><center><a href="http://tv.bdtype.com/live-tv.html" target="_blank">Live Tv</a></center></td>
-						<td><center><a href="https://iptvworld.bitbucket.io/ip_tv/" target="_blank">IP Tv</a></center></td>
+						<td><center><a href="https://iptvworld.bitbucket.io/ip_tv/" target="_blank">IP Tv (General)</a></center></td>
 					</tr>
 					<tr>
 						<td><center><a href="http://www.banglatube.net/" target="_blank">Bangla Tube</a></center></td>
@@ -181,38 +189,6 @@
 		Copyright &copy; <a href="https://iptv-world.github.io"> IPTV-WORLD </a>
 		</div>
 	</footer>
-	
-<script type="text/javascript">
-		setInterval(showTime, 1000);
-		function showTime() {
-			let time = new Date();
-			let hour = time.getHours();
-			let min = time.getMinutes();
-			let sec = time.getSeconds();
-			am_pm = "AM";
-
-			if (hour > 12) {
-				hour -= 12;
-				am_pm = "PM";
-			}
-			if (hour == 0) {
-				hr = 12;
-				am_pm = "AM";
-			}
-
-			hour = hour < 10 ? "0" + hour : hour;
-			min = min < 10 ? "0" + min : min;
-			sec = sec < 10 ? "0" + sec : sec;
-
-			let currentTime = hour + ":"
-				+ min + ":" + sec + am_pm;
-
-			document.getElementById("clock")
-				.innerHTML = currentTime;
-		}
-
-		showTime();
-</script>
 
 </body>
 </html>
