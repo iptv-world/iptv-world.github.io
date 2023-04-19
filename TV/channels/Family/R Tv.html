@@ -1,0 +1,28 @@
+<html>
+	<head>
+		<link href="https://iptv-world.github.io/file/video-js.min.css" rel="stylesheet"/>
+		<script src="https://iptv-world.github.io/file/video.min.js"></script>
+		<title>R Tv</title>
+	</head>
+	<body>
+		<video-js id="vid1" class="video-js vjs-default-skin" controls preload="auto" data-setup='{ "fluid" : true }'>
+			<source
+				src="https://bd.jagobd.com:444/c2VydmVyX4RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI/rtv-sg.stream/live-orgin/rtv-sg.stream/chunks.m3u8"
+				type="application/x-mpegURL"
+			/>
+		</video-js>
+
+		<script>
+			const vid = document.getElementById('vid1');
+			const player = videojs(vid);
+		</script>
+		
+		<center><p style="font-size:5vw;">Click on the <i style="font-size:5vw;" class="fa">&#9658;</i> icon to play.</p></center>
+		
+	    <script type="text/javascript">
+		document.addEventListener('contextmenu', 
+                        event => event.preventDefault());
+		</script>
+		
+	</body>
+</html>
