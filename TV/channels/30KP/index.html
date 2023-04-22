@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>30KPorn Player</title>
+	
+	<script>
+	var password; 
+	password=prompt('Enter Password',''); 
+	if (password=='vp30k23s') 
+	alert('Correct Password ! Click OK to Enter !');
+	else window.location.reload(true); 
+	</script>
+	
+	<style type="text/css">
+		body {
+			font-family: Arial, sans-serif;
+			margin: 0;
+			padding: 0;
+		}
+		.container {
+			max-width: 800px;
+			margin: 0 auto;
+			padding: 20px;
+		}
+		h1 {
+			font-size: 32px;
+			margin-bottom: 20px;
+		}
+		.video-list {
+			display: flex;
+			flex-direction: column;
+			margin-top: 20px;
+			padding: 0;
+			list-style: none;
+		}
+		.video-list li {
+			padding: 10px;
+			border: 1px solid #ccc;
+			cursor: pointer;
+			transition: background-color 0.2s ease;
+		}
+		.video-list li:hover {
+			background-color: #eee;
+		}
+		video {
+			width: 100%;
+			height: auto;
+			margin-top: 20px;
+		}
+	</style>
+	
+	<script type="text/javascript">
+	document.addEventListener('contextmenu', 
+            event => event.preventDefault());
+	</script>
+	
+</head>
+<body>
+	<div class="container">
+		<h1>30KPorn Player</h1>
+		
+		
+		<center><p style="font-size:2vw;">Click on the file you wanna play.</p></center>
+		
+		<video id="video-player" controls></video>
+		
+		<ul class="video-list"></ul>
+		
+	</div>
+	<script type="text/javascript">
+		const videoList = document.querySelector('.video-list');
+		const videoPlayer = document.getElementById('video-player');
+
+		fetch('https://iptv-world.github.io/file/VP30K.txt')
+			.then(response => response.text())
+			.then(data => {
+				const videoFiles = data.split('\n')
+					.filter(file => file.trim().endsWith('.mp4'));
+
+				videoFiles.forEach(file => {
+					const li = document.createElement('li');
+					li.textContent = file;
+					li.addEventListener('click', () => {
+						videoPlayer.setAttribute('src', file);
+						videoPlayer.play();
+					});
+					videoList.appendChild(li);
+				});
+			});
+	</script>
+</body>
+</html>
