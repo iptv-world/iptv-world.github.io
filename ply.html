@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    /* Add your CSS styles here */
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #f0f0f0;
+      padding: 20px;
+    }
+
+    #videoContainer {
+      position: relative;
+      max-width: 100%;
+      margin: 0 auto;
+    }
+
+    video {
+      width: 100%;
+      height: auto;
+    }
+
+    #playButton {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div id="videoContainer">
+    <video autoplay controls id="videoPlayer" preload="auto">
+      Your browser does not support the video tag.
+    </video>
+    <div id="playButton">
+      <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100">
+        <circle cx="50" cy="50" r="45" fill="transparent" stroke="#fff" stroke-width="2"/>
+        <polygon points="35,25 35,75 65,50" fill="#fff"/>
+      </svg>
+      <div>Click to Play</div>
+    </div>
+  </div>
+
+  <script>
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    const videoParam = urlParams.get("play");
+    const videoPlayer = document.getElementById("videoPlayer");
+    const playButton = document.getElementById("playButton");
+
+    if (videoParam) {
+      // Set the video source to the specified URL and autoplay
+      videoPlayer.src = videoParam;
+      playButton.style.display = "none"; // Hide the play button
+    } else {
+      document.write("URL parameter 'play' is missing or invalid.");
+    }
+
+    // Add a click event listener to the play button
+    playButton.addEventListener("click", function() {
+      videoPlayer.play();
+      playButton.style.display = "none"; // Hide the play button when clicked
+    });
+  </script>
+  
+  <center><p style="font-size:5vw;">Click on the <i style="font-size:5vw;" class="fa">&#9658;</i> icon to play.</p></center>
+</body>
+</html>
