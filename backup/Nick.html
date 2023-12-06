@@ -1,0 +1,26 @@
+<html>
+	<head>
+		<link href="https://iptv-world.github.io/file/video-js.min.css" rel="stylesheet"/>
+		<script src="https://iptv-world.github.io/file/video.min.js"></script>
+		<title>Nick</title>
+	</head>
+	<body>
+		<video-js id="vid1" class="video-js vjs-default-skin" poster="#" controls preload="auto" data-setup='{ "fluid" : true }'>
+			<source
+				src="https://ott.sonyplex.com:444/play/EDI0B4ME7MUUyw-g59yLM8VvH0tjNYvlrAKxDHS7HOQ/m3u8"
+				type="application/x-mpegURL"
+			/>
+		</video-js>
+
+		<script>
+			const vid = document.getElementById('vid1');
+			const player = videojs(vid);
+		</script>
+		
+	    <script type="text/javascript">
+		document.addEventListener('contextmenu', 
+                        event => event.preventDefault());
+		</script>
+		
+	</body>
+</html>
